@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json());
-const cors = require("cors");
 
 app.use(cors({
     origin: "https://text-to-image-three-alpha.vercel.app",
