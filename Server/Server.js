@@ -9,11 +9,11 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json());
+const cors = require("cors");
+
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://image-generator-nine-pink.vercel.app"
-    ],
+    origin: "https://text-to-image-three-alpha.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
 
